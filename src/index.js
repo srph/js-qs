@@ -45,6 +45,6 @@
       result += _prepend + key + '=' + value;
     });
 
-    return encode ? result : encodeURIComponent(result);
+    return encode ? encodeURIComponent(result) : result;
   }
 });
