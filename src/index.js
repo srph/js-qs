@@ -31,7 +31,7 @@
 
     var result = ''; // Our resulting string
     var keys = Object.keys(query);
-    (prepend || prepend = true);
+    prepend || (prepend = true); // Prepend option is `true` by default
 
     keys.forEach(function(key, i) {
       var value = JSON.stringify(query[key]);
