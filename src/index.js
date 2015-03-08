@@ -37,7 +37,8 @@
     var encode = options.encode || true;
 
     keys.forEach(function(key, i) {
-      var value = JSON.stringify(query[key]);
+      var _value = JSON.stringify(query[key]); // Just our stringified JSON
+      var value = encode ? encodeURIComponent(_value) : _value;
       
       // Prepends the ampsersand separator `&` for
       // each key except the first key
@@ -46,6 +47,6 @@
       result += _prepend + key + '=' + value;
     });
 
-    return (prepend ? '?' : '') + (encode ? encodeURIComponent(result) : result);
+    return (prepend ? '?' : '') + result;
   }
 });
