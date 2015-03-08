@@ -38,13 +38,14 @@
 
     keys.forEach(function(key, i) {
       var value = JSON.stringify(query[key]);
-      // We check if should prepend `?` for the first key.
-      // The following is prepended by `&`
-      var _prepend = (i == 0 && prepend ? '?' : (i > 0 ? '&' : ''));
+      
+      // Prepends the ampsersand separator `&` for
+      // each key except the first key
+      var _prepend = (i > 0 ? '&' : '');
 
       result += _prepend + key + '=' + value;
     });
 
-    return encode ? encodeURIComponent(result) : result;
+    return (prepend ? '?' : '') + (encode ? encodeURIComponent(result) : result);
   }
 });
