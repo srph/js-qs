@@ -23,7 +23,7 @@
     root.o2q = factory();
   }
 })(this, function() {
-  return function o2q(query, prepend) {
+  return function o2q(query, options) {
     // This function does not accept primitives and functions
     if (typeof query !== 'object') {
       throw new Error('Provided query must be an object');
@@ -31,7 +31,10 @@
 
     var result = ''; // Our resulting string
     var keys = Object.keys(query);
-    prepend || (prepend = true); // Prepend option is `true` by default
+    
+    // All options (`prepend` and `encode` are `true` by default)
+    var prepend = options.prepend || true;
+    var encode = options.encode || true;
 
     keys.forEach(function(key, i) {
       var value = JSON.stringify(query[key]);
@@ -42,6 +45,6 @@
       result += _prepend + key + '=' + value;
     });
 
-    return result;
+    return encode ? result : encodeURIComponent(result);
   }
 });
