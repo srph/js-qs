@@ -64,5 +64,7 @@ See the [Building Documentation]() (*This is for contributors or experienced dev
 
 ## Alternatives
 
+This library does not intend to compete with alternative libraries, and also only provide very simple features compared to its alternatives.
+
 - [visionmedia/node-querystring](https://github.com/visionmedia/node-querystring)
 - [hapijs/qs](https://github.com/hapijs/qs)
