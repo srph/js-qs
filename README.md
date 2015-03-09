@@ -61,3 +61,8 @@ See the [Building Documentation]() (*This is for contributors or experienced dev
 > [srph.github.io](http://srph.github.io) &nbsp;&middot;&nbsp;
 > GitHub [@srph](https://github.com/srph) &nbsp;&middot;&nbsp;
 > Twitter [@_srph](https://twitter.com/_srph)
+
+## Alternatives
+
+- [visionmedia/node-querystring](https://github.com/visionmedia/node-querystring)
+- [hapijs/qs](https://github.com/hapijs/qs)
