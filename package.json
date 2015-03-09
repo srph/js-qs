@@ -1,0 +1,25 @@
+{
+  "name": "qs.js",
+  "version": "1.0.0",
+  "description": "Translates your JavaScript object to a URL query.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srph/qs.js.git"
+  },
+  "author": "srph <seraphipod@gmail.com> (https://srph.github.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srph/qs.js/issues"
+  },
+  "homepage": "https://github.com/srph/qs.js",
+  "devDependencies": {
+    "mocha": "^2.2.0"
+  }
+}
