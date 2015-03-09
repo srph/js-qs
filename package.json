@@ -1,5 +1,5 @@
 {
-  "name": "qs.js",
+  "name": "srph-qs",
   "version": "0.1.0",
   "description": "Translates your JavaScript object to a URL query.",
   "main": "index.js",
