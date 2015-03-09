@@ -1,13 +1,15 @@
 {
   "name": "qs.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Translates your JavaScript object to a URL query.",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "test"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "build": "webpack -p -d",
+    "watch": "webpack -p -w -d"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/srph/qs.js",
   "devDependencies": {
-    "mocha": "^2.2.0"
+    "mocha": "^2.2.0",
+    "sinon": "^1.13.0"
   }
 }
