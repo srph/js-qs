@@ -36,12 +36,12 @@ If you are not using CommonJS `require` (or if you've never heard of any of thos
 ```js
 // For AMD (Require.js)
 define(['srph-qs'], function(qs) {
-  // qs.stringify
+  qs.stringify(...);
 });
 
 // For browser-globals (Browser-only):
 // Make sure to include the script (<script src="/path/to/qs.js"></script>)
-// qs.stringify
+qs.stringify(...);
 ```
 
 See the [API Documentation]().
