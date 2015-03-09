@@ -54,6 +54,10 @@ For features or fixes, I would suggest to submit an issue first before submittin
 
 See the [Building Documentation]() (*This is for contributors or experienced developers only*).
 
+## Changelog
+
+See the [Changelog]() file.
+
 ## Acknowledgement
 
 **qs.js** © 2015+, Kier Borromeo (srph). **qs.js** is released under the [MIT](mit-license.org) license.
