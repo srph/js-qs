@@ -2,10 +2,17 @@
   "name": "srph-qs",
   "version": "0.1.0",
   "description": "Translates your JavaScript object to a URL query.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "directories": {
     "test": "test"
   },
+  "keywords": [
+    "qs",
+    "querystring",
+    "query-string",
+    "query",
+    "url"
+  ],
   "scripts": {
     "test": "make test",
     "build": "webpack -p -d",

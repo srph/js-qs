@@ -1,0 +1,30 @@
+{
+  "name": "srph-qs",
+  "version": "0.1.0",
+  "homepage": "https://github.com/srph/qs.js",
+  "authors": [
+    "srph <seraphipod@gmail.com>"
+  ],
+  "description": "Translates object to a query string, and vice-versa",
+  "main": "./dist/qs.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "qs",
+    "querystring",
+    "query-string",
+    "query",
+    "url"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
