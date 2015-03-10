@@ -11,4 +11,9 @@ suite('extend', function() {
     extend(x, { hi: 'hello' });
     assert.deepEqual(x, { hello: 'hi', hi: 'hello' });
   });
+
+  test('should override keys from first to last (last obj\'s values remain)', function() {
+    assert.deepEqual(extend({}, { hello: 'hi' }, { hello: 'hello' }), { hello: 'hello' });
+    assert.deepEqual(extend({}, { hello: 'hi' }, { hello: 'hello' }, { hello: 'bae' }), { hello: 'bae' });
+  });
 });

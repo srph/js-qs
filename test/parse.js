@@ -51,4 +51,9 @@ suite('query to object', function() {
       assert.deepEqual(parse('y=%23s&x=%40%3dy'), { y: '#s', x: '@=y'});
     });
   });
+
+  test('should set value to blank string when key has no value (?x=&)', function() {
+    assert.deepEqual(parse('?x='), { x: '' });
+    assert.deepEqual(parse('?x=&y=&z=5'), { x: '', y: '', z: '5' });
+  });
 });

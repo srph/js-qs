@@ -1,15 +1,22 @@
 /**
- * A utility method to `extend` obj2 to obj1
+ * A utility method to `extend` objN..obj2 to obj1
  *
  * @param {Object} dest 
- * @param {Object} source
+ * @param {Object} source1...source2...sourceN
  */
-module.exports = function(dest, source) {
-  var keys = Object.keys(source);
+module.exports = function(dest) {
+  // Using native loops instead of `map` or `forEach`
+  // http://jsperf.com/native-map-versus-array-looping
+  // Now we'll iterate through the splitted keyz
+  for ( var i = 1; i < arguments.length; i++ ) {
+    var source = arguments[i];
+    var keys = Object.keys(source);
 
-  keys.forEach(function(key) {
-    dest[key] = source[key];
-  });
+    for ( var _i = 0; _i < keys.length; _i++ ) {
+      var key = keys[_i];
+      dest[key] = source[key];
+    }
+  }
 
   return dest;
 }

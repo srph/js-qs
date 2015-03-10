@@ -1,5 +1,8 @@
 var extend = require('./extend');
 
+// All options (`decode` is `true` by default)
+var _defaults = { decode: true };
+
 module.exports = function(query, options) {
   // This function does not accept primitives and functions
   if (typeof query !== 'string') {
@@ -8,14 +11,11 @@ module.exports = function(query, options) {
 
   // Our resulting object
   var result = {};
-  var _defaults = { decode: true };
-
-  // We don't have to `extend`
-  // if the consumer did not provide  any option
-  if ( options !== undefined ) {
-    extend(_defaults, options);
-  }
-  options = _defaults;
+  
+  // We don't have to `extend` if the consumer did not provide any option.
+  // We also don't need the defaults later on so we can just extend options
+  // to the defaults objects, and then assign options to the result
+  options = options !== undefined ? extend({}, _defaults, options) : _defaults;
 
   // First, we'll try to remove the prepending `?`,
   // then split each key=value separated by &.
@@ -29,7 +29,8 @@ module.exports = function(query, options) {
     // `x=y` would be ['x', 'y'], assigning it
     // like this.x = 'y';
     var kv = splitted[i].split('=');
-    result[kv[0]] = options.decode ? decodeURIComponent(kv[1]) : kv[1];
+    var value = kv[1] !== undefined ? kv[1] : '';
+    result[kv[0]] = options.decode ? decodeURIComponent(value) : value;
   };
 
   return result;

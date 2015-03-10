@@ -40,7 +40,7 @@ suite('object-to-query implementation', function() {
       // # = %23
       // @ = %40
       // = = %3D
-      obj = { x: '=y', y: '@#z' }
+      obj = { x: '=y', y: '@#z' };
     });
 
     test('should encode query values by default', function() {
@@ -53,6 +53,16 @@ suite('object-to-query implementation', function() {
 
     test('should not encode query values when option.encode is assigned false', function() {
       assert.equal(stringify(obj, { encode: false }), '?x==y&y=@#z');
+    });
+  });
+
+  suite('undefined or null key values', function() {
+    test('should not add to the string', function() {
+      assert.equal(stringify({ x: null, y: undefined, z: 'y'}, { prepend: false }), 'z=y');
+    });
+
+    test('should not prepend `&` to the (technically) first key when the (logically) first key', function() {
+      assert.notEqual(stringify({ x: undefined, y: 'lel'}), '?&y=lel')
     });
   });
 });
