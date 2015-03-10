@@ -41,7 +41,7 @@ suite('query to object', function() {
       // # = %23
       // @ = %40
       // = = %3D
-      assert.deepEqual(parse('y=%23s&x=%40%3Dy', { decode: false}), { y: '%23s', x: '%40%3Dy'});
+      assert.deepEqual(parse('y=%23s&x=%40%3Dy', { decode: false }), { y: '%23s', x: '%40%3Dy'});
     });
 
     test('should by when assigned true', function() {
