@@ -24,3 +24,18 @@ var qs = require('srph-qs');
 var str = qs.stringify({ first: 'Kier', last: 'Borromeo' }); // => '?first=Kier&last=Borromeo'
 var obj = qs.stringify(str); // => { first: 'Kier', last: 'Borromeo' }
 ```
+
+## Non-node users
+
+If you are not using CommonJS `require` (or if you've never heard of any of those, you don't have to care), `qs.js` is exported as [UMD](https://github.com/umdjs/umd).
+
+```js
+// For AMD (Require.js)
+define(['srph-qs'], function(qs) {
+  qs.stringify(...);
+});
+
+// For browser-globals (Browser-only):
+// Make sure to include the script (<script src="/path/to/qs.js"></script>)
+qs.stringify(...);
+```
