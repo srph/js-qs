@@ -25,6 +25,8 @@ var str = qs.stringify({ first: 'Kier', last: 'Borromeo' }); // => '?first=Kier&
 var obj = qs.stringify(str); // => { first: 'Kier', last: 'Borromeo' }
 ```
 
+See the [API Documentation]().
+
 ## Non-node users
 
 If you are not using CommonJS `require` (or if you've never heard of any of those, you don't have to care), `qs.js` is exported as [UMD](https://github.com/umdjs/umd).
