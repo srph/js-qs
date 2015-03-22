@@ -1,6 +1,6 @@
-# qs.js [![npm version](http://img.shields.io/npm/v/srph-qs.svg?style=flat)](https://npmjs.org/package/srph-qs) [![devDependency Status](https://david-dm.org/srph/qs.js/dev-status.svg)](https://david-dm.org/srph/qs.js#info=devDependencies) [![Build Status](https://travis-ci.org/srph/qs.js.svg?branch=master)](https://travis-ci.org/srph/reflux-flash?branch=master) [![SemVer](http://img.shields.io/badge/semver-2.0.0-brightgreen.svg)](http://semver.org/spec/v2.0.0.html) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+# js-qs [![npm version](http://img.shields.io/npm/v/srph-qs.svg?style=flat)](https://npmjs.org/package/srph-qs) [![devDependency Status](https://david-dm.org/srph/js-qs/dev-status.svg)](https://david-dm.org/srph/js-qs#info=devDependencies) [![Build Status](https://travis-ci.org/srph/js-qs.svg?branch=master)](https://travis-ci.org/srph/js-qs?branch=master) [![SemVer](http://img.shields.io/badge/semver-2.0.0-brightgreen.svg)](http://semver.org/spec/v2.0.0.html) [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
-Translates object to a query string, and vice-versa. `qs.js` is a simple library weighing `~2kb`.
+Translates object to a query string, and vice-versa. `js-qs` is a simple library weighing `~2kb`.
 
 # Installation
 
@@ -60,7 +60,7 @@ See the [Changelog]() file.
 
 ## Acknowledgement
 
-**qs.js** © 2015+, Kier Borromeo (srph). **qs.js** is released under the [MIT](mit-license.org) license.
+**js-qs** © 2015+, Kier Borromeo (srph). **js-qs** is released under the [MIT](mit-license.org) license.
 
 > [srph.github.io](http://srph.github.io) &nbsp;&middot;&nbsp;
 > GitHub [@srph](https://github.com/srph) &nbsp;&middot;&nbsp;
