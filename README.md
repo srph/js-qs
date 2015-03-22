@@ -2,61 +2,25 @@
 
 Translates object to a query string, and vice-versa. `js-qs` is a simple library weighing `~2kb`.
 
-# Installation
+- [Getting Started](https://github.com/srph/js-qs/blob/master/docs/getting-started.md)
+ - [Installation](https://github.com/srph/js-qs/blob/master/docs/getting-started.md#installation)
+ - [Usage](https://github.com/srph/js-qs/blob/master/docs/getting-started.md#usage)
+ - [Non-node users](https://github.com/srph/js-qs/blob/master/docs/getting-started.md#non-node-users)
+- [API](https://github.com/srph/js-qs/blob/master/docs/api.md)
+- [Building](https://github.com/srph/js-qs/blob/master/docs/building.md)
+- [Changelog](https://github.com/srph/js-qs/blob/master/docs/changelog.md)
 
-- **qs.js** is available via [**bower**]
+## Important Note
 
-```bash
-$ bower install srph-qs --save
-```
+This is an experimental pet project; and technically a dead project. Although *It Just Works*™, it is not recommended for production. If you'd like to continue this project, feel free to (friendly) fork, or contact me for project continuation or collaboration.
 
- \* *The `--save` argument persists it to `bower.json`* 
+This was written for practice, and, also, because I found [`hapijs/qs`](https://github.com/hapijs/qs) support for *nests* to be useless. It didn't make any sense; probably because I've never had a use-case for it.
 
-- **qs.js** is available via [**npm**]
+## Alternatives
 
-```bash
-$ npm install srph-qs --save
-```
+- [visionmedia/node-querystring](https://github.com/visionmedia/node-querystring)
+- [hapijs/qs](https://github.com/hapijs/qs)
 
-\* *The `--save` argument persists it to `package.json`* 
-
-# Usage
-
-```js
-var qs = require('srph-qs');
-
-var str = qs.stringify({ first: 'Kier', last: 'Borromeo' }); // => '?first=Kier&last=Borromeo'
-var obj = qs.stringify(str); // => { first: 'Kier', last: 'Borromeo' }
-```
-
-# Non-node users
-
-If you are not using CommonJS `require` (or if you've never heard of any of those, you don't have to care), `qs.js` is exported as [UMD](https://github.com/umdjs/umd).
-
-```js
-// For AMD (Require.js)
-define(['srph-qs'], function(qs) {
-  qs.stringify(...);
-});
-
-// For browser-globals (Browser-only):
-// Make sure to include the script (<script src="/path/to/qs.js"></script>)
-qs.stringify(...);
-```
-
-See the [API Documentation]().
-
-# Contribution
-
-For features or fixes, I would suggest to submit an issue first before submitting a pull request. This avoids closed pull-requests; useless work. **Feel free** to open an issue for any questions and inquries!
-
-## Building
-
-See the [Building Documentation]() (*This is for contributors or experienced developers only*).
-
-## Changelog
-
-See the [Changelog]() file.
 
 ## Acknowledgement
 
@@ -65,10 +29,3 @@ See the [Changelog]() file.
 > [srph.github.io](http://srph.github.io) &nbsp;&middot;&nbsp;
 > GitHub [@srph](https://github.com/srph) &nbsp;&middot;&nbsp;
 > Twitter [@_srph](https://twitter.com/_srph)
-
-## Alternatives
-
-This library does not intend to compete with alternative libraries, and also only provide very simple features compared to its alternatives.
-
-- [visionmedia/node-querystring](https://github.com/visionmedia/node-querystring)
-- [hapijs/qs](https://github.com/hapijs/qs)
