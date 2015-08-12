@@ -22,7 +22,7 @@ $ npm install srph-qs --save
 var qs = require('srph-qs');
 
 var str = qs.stringify({ first: 'Kier', last: 'Borromeo' }); // => '?first=Kier&last=Borromeo'
-var obj = qs.stringify(str); // => { first: 'Kier', last: 'Borromeo' }
+var obj = qs.parse(str); // => { first: 'Kier', last: 'Borromeo' }
 ```
 
 See the [API Documentation]().
